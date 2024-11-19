@@ -1,32 +1,73 @@
+/* Basic page styling */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container {
-    margin-top: 50px;
+/* Container to center the form on the page */
+#auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-button {
-    padding: 10px 20px;
+/* Box around the form */
+.auth-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
     font-size: 16px;
     cursor: pointer;
-    border: none;
-    background-color: #5a67d8;
-    color: white;
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #434190;
+form button:hover {
+    background-color: #45a049;
 }
 
-.output {
-    margin-top: 20px;
-    font-size: 24px;
+/* Title for each form */
+h3 {
+    text-align: center;
+    font-size: 22px;
     color: #333;
-    font-weight: bold;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 480px) {
+    .auth-box {
+        width: 90%;
+    }
 }
